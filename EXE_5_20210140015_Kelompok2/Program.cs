@@ -99,7 +99,40 @@ namespace EXE_5_20210140015_Kelompok2
                 {
                     Console.WriteLine("");
                     Console.WriteLine("1. Implement Inssert Option");
-                    Console.WriteLine("2. ");
+                    Console.WriteLine("2. Implement Delete Option");
+                    Console.WriteLine("3. Display Values");
+                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("\nEnter Your Choice (1-4): ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                Console.Write("Enter a number: ");
+                                int string = Convert.ToInt32(System.Console.ReadLine());
+                                Console.WriteLine();
+                                q.insert(string);
+                            }
+                            break;
+                        case '2':
+                            {
+                                q.delete();
+                            }
+                            break;
+                        case '3':
+                            {
+                                q.display();
+                            }
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("Invalid Option!");
+                            }
+                            break;
+                    }
                 }
             }
         }
