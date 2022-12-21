@@ -21,25 +21,25 @@ namespace Execrise5_20170140031_Kelompok2
     {
         public string nama;
         public Antrian next;
-        public Antrian(string n, Antrian d)
+        public Antrian(string a, Antrian s)
         {
-            nama = n;
-            next = d;
+            nama = a;
+            next = s;
         }
     }
 
     class Stacks
     {
-        Antrian depan;
-        Antrian belakang;
+        Antrian Ammar;
+        Antrian Syuhada;
         public Stacks()
         {
-            depan = null;
-            belakang = null;
+            Ammar = null;
+            Syuhada = null;
         }
         bool Antrian_Kosong()
         {
-            if (depan == null)
+            if (Ammar == null)
                 return (true);
             else
                 return (false);
@@ -49,15 +49,15 @@ namespace Execrise5_20170140031_Kelompok2
         {
             Antrian baru;
             baru = new Antrian(nama, null);
-            if (depan == null)
+            if (Ammar == null)
             {
-                depan = baru;
-                belakang = baru;
+                Ammar = baru;
+                Syuhada = baru;
             }
             else
             {
-                belakang.next = baru;
-                belakang = belakang.next;
+                Syuhada.next = baru;
+                Syuhada = Syuhada.next;
             }
 
             Console.WriteLine("\nmasuk" + nama + " dalam antrina.");
@@ -65,8 +65,8 @@ namespace Execrise5_20170140031_Kelompok2
 
         public void keluarkan()
         {
-            Console.WriteLine("\nAntrian Selesai: " + depan.nama);
-            depan = depan.next;
+            Console.WriteLine("\nAntrian Selesai: " + Ammar.nama);
+            Ammar = Ammar.next;
         }
 
         public void display()
@@ -77,7 +77,7 @@ namespace Execrise5_20170140031_Kelompok2
             else
             {
                 Console.WriteLine();
-                for (sementara = depan; sementara != null; sementara = sementara.next)
+                for (sementara = Ammar; sementara != null; sementara = sementara.next)
                 {
                     Console.WriteLine(sementara.nama);
                 }
