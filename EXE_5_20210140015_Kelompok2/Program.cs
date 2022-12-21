@@ -54,5 +54,32 @@ namespace EXE_5_20210140015_Kelompok2
                     Ammar = Ammar + 1;
             }
         }
+        public void display()
+        {
+            int Ammar_position = Ammar;
+            int Syuhada_position = Syuhada;
+            if (Ammar == -1)
+            {
+                Console.WriteLine("Queue is empty\n");
+                return;
+            }
+            Console.WriteLine("\nElement is the queue are...\n");
+            if (Ammar_position <= Syuhada_position)
+            {
+                while (Ammar_position <= Syuhada_position)
+                {
+                    Console.Write(queue_array[Ammar_position] + " ");
+                    Ammar_position++;
+                }
+                Console.WriteLine();
+            }
+            else
+            {
+                while (Ammar_position <= max - 1)
+                {
+
+                }
+            }
+        }
     }
 }
