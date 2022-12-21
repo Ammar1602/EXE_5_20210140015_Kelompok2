@@ -77,7 +77,29 @@ namespace EXE_5_20210140015_Kelompok2
             {
                 while (Ammar_position <= max - 1)
                 {
-
+                    Console.Write(queue_array[Ammar_position] + " ");
+                    Ammar_position++;
+                }
+                Ammar_position = 0;
+                while (Ammar_position <= Syuhada_position)
+                {
+                    Console.Write(queue_array[Ammar_position] + " ");
+                    Ammar_position++;
+                }
+                Console.WriteLine();
+            }
+        }
+        static void Main(string[] args)
+        {
+            Queues q = new Queues();
+            char ch;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("1. Implement Inssert Option");
+                    Console.WriteLine("2. ");
                 }
             }
         }
